@@ -11,15 +11,14 @@ call plug#end()
 " SETINGS
     set softtabstop=0 noexpandtab
     set autoindent 
-	syntax on
+    syntax on
     colorscheme nord 
-    
-	set number
-	set expandtab
-	set tabstop=4
+    set number
+    set expandtab
+    set tabstop=4
     set shiftwidth=4
-	set hlsearch
-	set incsearch
+    set hlsearch
+    set incsearch
 
 " MAPPINGS
 
