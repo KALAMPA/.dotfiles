@@ -2,8 +2,8 @@
 
 call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
-	Plug 'morhetz/gruvbox'
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'morhetz/gruvbox'
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinares' } 
     
 call plug#end() 
