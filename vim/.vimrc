@@ -3,9 +3,9 @@
 call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
 	Plug 'morhetz/gruvbox'
-	Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+    Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinares' } 
-    
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end() 
 
 " SETINGS
@@ -13,7 +13,12 @@ call plug#end()
     set autoindent 
 	syntax on
     colorscheme nord 
-    
+    set encoding=utf-8    
+    set hidden
+    set nobackup
+    set nowritebackup
+    set cmdheight=2
+    set updatetime=300
 	set number
 	set expandtab
 	set tabstop=4
@@ -46,3 +51,12 @@ call plug#end()
 			exec "wincmd ".a:key
 		endif 
 	endfunction	
+" VIMGO
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1

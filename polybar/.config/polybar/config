@@ -39,7 +39,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 4
 line-color = #f00
 
 border-size = 4 
@@ -51,12 +51,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = JetBrains Mono:pixelsize=10;1
+font-0 = JetBrains Mono:pixelsize=12;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
-font-3 = Font Awesome 5 Free:pixelsize=10;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=10;2
-font-5 = Font Awesome 5 Brands:pixelsize=10;2
+font-3 = Font Awesome 5 Free:pixelsize=12;2
+font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow 
@@ -64,7 +64,7 @@ modules-right = xbacklight pulseaudio-control xkeyboard memory cpu wlan eth batt
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
+;tray-background = #ff63ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -411,7 +411,7 @@ menu-2-1-exec = menu-open-0
 [module/pulseaudio-control]
 type = custom/script
 tail = true
-format-underline = #FFB069 
+format-underline = #cab39f 
 label-padding = 2
 label-foreground = ${colors.foreground}
 
