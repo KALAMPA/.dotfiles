@@ -2,7 +2,7 @@
 
 call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
-	Plug 'morhetz/gruvbox'
+    Plug 'morhetz/gruvbox'
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinares' } 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -11,7 +11,7 @@ call plug#end()
 " SETINGS
     set softtabstop=0 noexpandtab
     set autoindent 
-	syntax on
+    syntax on
     colorscheme nord 
     set encoding=utf-8    
     set hidden
@@ -23,8 +23,8 @@ call plug#end()
 	set expandtab
 	set tabstop=4
     set shiftwidth=4
-	set hlsearch
-	set incsearch
+    set hlsearch
+    set incsearch
 
 " MAPPINGS
 
