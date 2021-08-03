@@ -39,7 +39,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 4
+line-size = 3
 line-color = #f00
 
 border-size = 4 
@@ -51,7 +51,7 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = JetBrains Mono:pixelsize=12;1
+font-0 = JetBrains Mono:pixelsize=11;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:pixelsize=12;2
@@ -60,7 +60,7 @@ font-5 = Font Awesome 5 Brands:pixelsize=12;2
 
 modules-left = i3
 modules-center = xwindow 
-modules-right = xbacklight pulseaudio-control xkeyboard memory cpu wlan eth battery temperature date 
+modules-right = filesystem xbacklight pulseaudio-control xkeyboard memory cpu wlan eth battery temperature date 
 
 tray-position = right
 tray-padding = 2
@@ -104,35 +104,14 @@ label-indicator-underline = ${colors.secondary}
 type = internal/fs
 interval = 25
 
-# mount-0 = /home
-
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+mount-0 = /home
+label-mounted = %{F#B48EAD}%mountpoint%%{F-}: %free% of %total%
+label-mounted-underline = #B48EAD
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
-
 [module/i3]
+
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
@@ -140,6 +119,7 @@ wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
+
 ws-icon-0 = 1;
 ws-icon-1 = 2;
 ws-icon-2 = 3;

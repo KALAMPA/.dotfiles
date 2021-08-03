@@ -25,7 +25,11 @@ call plug#end()
     set shiftwidth=4
     set hlsearch
     set incsearch
-
+    set keymap=russian-jcukenwin
+    inoremap <C-'> <C-^>
+    set iminsert=0
+    set imsearch=0
+    highlight lCursor guifg=NONE guibg=Cyan
 " MAPPINGS
 
 	map <C-n> :NERDTreeToggle<CR>
@@ -52,11 +56,11 @@ call plug#end()
 		endif 
 	endfunction	
 " VIMGO
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_generate_tags = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_functions = 1
+    let g:go_highlight_function_calls = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_extra_types = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_highlight_generate_tags = 1
