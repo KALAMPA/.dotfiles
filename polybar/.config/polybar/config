@@ -56,12 +56,10 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 5 Free:pixelsize=12;2
 font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:pixelsize=12;2
-
+font-5 = Material Icons:size=12;0
 modules-left = i3
 modules-center = xwindow 
 modules-right = filesystem xbacklight pulseaudio-control xkeyboard memory cpu wlan eth battery temperature date 
-
 tray-position = right
 tray-padding = 2
 ;tray-background = #ff63ff
@@ -318,9 +316,10 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
+
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ADP1
 full-at = 98
 
@@ -334,20 +333,20 @@ format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 =  
+ramp-capacity-1 =  
+ramp-capacity-2 =  
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = 
+animation-charging-1 =  
+animation-charging-2 =  
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
+animation-discharging-0 =  
+animation-discharging-1 =  
+animation-discharging-2 =  
 animation-discharging-foreground = ${colors.foreground-alt}
 animation-discharging-framerate = 750
 
@@ -365,28 +364,13 @@ label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
+ramp-0 = 
 label-open = 
 label-open-foreground = ${colors.secondary}
 label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
 
 [module/pulseaudio-control]
 type = custom/script
@@ -399,9 +383,17 @@ exec = "pulseaudio-control --icons-volume " , " --icon-muted " " --sink
 click-right = exec pavucontrol &
 click-left = pulseaudio-control togmute
 click-middle = pulseaudio-control --sink-blacklist "alsa_output.pci-0000_01_00.1.hdmi-stereo-extra2" next-sink
-scroll-up = pulseaudio-control --volume-max 130 up
+scroll-u = pulseaudio-control --volume-max 130 up
 scroll-down = pulseaudio-control --volume-max 130 down
+[module/weather]
+type = custom/script
+exec = /bin/polybar-forecast
+exec-if = ping openweathermap.org -c 1
+format-underline = #cab39f
+interval = 600
+label-font = 3EY
 [settings]
+
 screenchange-reload = true
 ;compositing-background = xor
 ;compositing-background = screen
