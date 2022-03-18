@@ -1,18 +1,26 @@
 " PLUG-INS
 
 call plug#begin('~/.vim/plugged')
+    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+    Plug 'fannheyward/telescope-coc.nvim'
     Plug 'arcticicestudio/nord-vim'
     Plug 'morhetz/gruvbox'
     Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
     Plug 'fatih/vim-go', {'do': ':GoUpdateBinares' } 
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'mhinz/vim-startify'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+    Plug 'folke/tokyonight.nvim'
+    Plug 'psliwka/vim-smoothie'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
 call plug#end() 
 
 " SETINGS
-   set softtabstop=0 noexpandtab
+    set softtabstop=0 noexpandtab
     set autoindent 
     syntax on
-    colorscheme nord 
+    colorscheme tokyonight 
     set encoding=utf-8    
     set hidden
     set nobackup
@@ -149,19 +157,9 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
-      \ },
-      \ }
-
-
-
+"
+" TODO!!!!
+"
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
@@ -179,3 +177,17 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" TELESCOPE 
+lua << EOF 
+
+require('telescope').setup{
+    defaults = {
+            prompt_prefix = "$ "
+        }
+}
+require('telescope').load_extension("fzf")
+require('telescope').load_extension("coc")
+
+
+EOF 

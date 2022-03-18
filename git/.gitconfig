@@ -3,8 +3,8 @@
 	autocrlf = input
 	safecrlf = warn
 [user]
-	name = Grigory
-    email = zolotov.grg@gmail.com
+	name = Grigoriy Zolotov Olegovich
+    email = g.zolotov@andersenlab.com 
 [alias]
     co = checkout
     ci = commit

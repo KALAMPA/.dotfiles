@@ -1,0 +1,25 @@
+{
+    "suggest.noselect": false,
+    "diagnostic.errorSign": "✘",
+    "diagnostic.warningSign": "!",
+    "diagnostic.infoSign": "?",
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "go",
+        "c"
+    ],
+    "clangd.enabled": true,
+    "go.goplsArgs": [
+        "-remote=auto",
+        "-logfile",
+        "/tmp/gopls.log"
+    ],
+    "go.goplsPath": "/home/grigory/go/bin/gopls",
+    "go.goplsOptions": {
+        "staticcheck": true,
+        "buildFlags": [
+            "-tags=unit"
+        ]
+    }
+}

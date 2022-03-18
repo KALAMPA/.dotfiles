@@ -23,7 +23,9 @@ setopt prompt_subst
 export RPROMPT='%{$fg[red]%}$(git_prompt)'
 export PROMPT="%{$fg[cyan]%}[%n%{$fg[magenta]%}@%m%{$fg[cyan]%} %~]$%{$reset_color%} " 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias scr="scrot -t 20 -d 5"
 alias ll="ls --color=auto -la"
 alias cl="clear"
 pfetch
+source /usr/share/nvm/init-nvm.sh
